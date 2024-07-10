@@ -18,7 +18,52 @@ namespace StringManipulationChallenge
             //implement the required code here and within the methods below.
             //
             //
+            Console.WriteLine("Please enter your message and press enter"); 
 
+            //5. Assign entered string to string variable 
+            userInputString = Console.ReadLine() ; 
+            
+            // 6. Print to the console "Please enter a number LESS THAN the length of your string and press enter"
+            Console.WriteLine("Please enter a number LESS THAN the length of your string and press enter"); 
+
+            /* 
+            7. Assign that entered string to the int variable which you declared initially. 
+            8. You will need to parse the string to an int using 'int.parse();'
+            */ 
+            elementNum = Int32.Parse(Console.ReadLine()); 
+
+            // 9. Call each of the provided methods with the correct arguments.
+            // 10. Print the return of each method to the console.
+            StringToUpper(userInputString); 
+            StringToLower(userInputString); 
+            StringTrim(userInputString); 
+            StringSubstring(userInputString,elementNum); 
+
+            // 12. Ask the user "For which character should I search in your original message?"
+            Console.WriteLine("For which character should I search in your original message?"); 
+
+
+            // 13. Same the user input to the char variable. **remember we are not validating 
+            char1 = Convert.ToChar(Console.Read());
+
+            // 14. Call the SearchChar method and print the result to the console.
+            Console.WriteLine(SearchChar(userInputString,char1)); 
+
+            /*
+            15. Ask the user for their first name and save it to a string variable.
+            */ 
+            Console.WriteLine("What is your first name? "); 
+            fName = Console.ReadLine() ; 
+            Console.WriteLine("Entered first name:" + fName);
+
+            //   16. Ask the user for their last name and save it to a variable. 
+            Console.WriteLine("What is your last name? ");
+            lName = Console.ReadLine()  ; 
+            Console.WriteLine("Entered last name:" + lName);
+
+            // 17. Call the ConcatNames method and print the full name result to the console.
+            userFullName = ConcatNames(fName,lName); 
+            Console.WriteLine("Your full name: " + userFullName); 
 
         }
 
@@ -39,8 +84,9 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.        
         public static string StringToLower(string x){
-            throw new NotImplementedException("StringToUpper method not implemented.");
-
+            x= x.ToLower() ; 
+            Console.WriteLine(x); 
+            return x; 
         }
         
         // This method has one string parameter. 
@@ -49,7 +95,9 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringTrim(string x){
-            throw new NotImplementedException("StringTrim method not implemented.");
+           x = x.Trim(); 
+           Console.WriteLine(x); 
+           return x ; 
 
         }
         
@@ -59,7 +107,9 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringSubstring(string x, int elementNum){
-            throw new NotImplementedException("StringSubstring method not implemented.");
+            x = x.Substring(elementNum); 
+            Console.WriteLine(x); 
+            return x; 
 
         }
 
@@ -77,7 +127,7 @@ namespace StringManipulationChallenge
         // 1) concatenate the two strings with a space between them.
         // 2) return the new string.
         public static string ConcatNames(string fName, string lName){
-            throw new NotImplementedException("ConcatNames method not implemented.");
+           return string.Concat(fName," ", lName);
         }
 
 
