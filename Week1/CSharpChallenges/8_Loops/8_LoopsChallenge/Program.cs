@@ -11,23 +11,40 @@ namespace _8_LoopsChallenge
             System.Console.WriteLine();
         
             UseDoWhile();
+            System.Console.WriteLine();
 
             UseWhile();
 
         }
         public static void UseFor()
         {
-            // challenge 1
+            Console.WriteLine("UseFor output: ");
+            for (int i = 0; i < 50; i++ ) { 
+                if ( i %2 == 1) Console.Write(i + " "); 
+            }
            
         }
         public static void UseDoWhile()
         {
-            // challenge 2
+            Console.WriteLine("UseDoWhile output: ");
+            int i = 0; 
+            do {
+                Console.Write(" " + i + " ");
+                i += 2;
+            } while (i <= 50) ;
             
         }
         public static void UseWhile()
         {
-            //challenge 3
+            Console.WriteLine("In UseWhile:")
+            int i = 0; 
+            while (i < 100) {
+                
+                 if ( i%5 == 0 ) Console.WriteLine("skipping this number"); 
+                else Console.WriteLine(i); 
+                i += 3 ; 
+                
+            }
 
         }
     }
