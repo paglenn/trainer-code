@@ -4,9 +4,16 @@ namespace _9_ClassesChallenge
 {
     public class Human
     {
+        public string lastName = "Smyth"; 
+        public string firstName = "Pat" ; 
         
-        
-        
+        public int age; 
+        public string eyeColor ; 
+        private int weight; 
+        public int Weight { get { return weight;}
+        set {
+            if (value >= 0 && value <= 400) weight = value;
+        } }
         
         public Human() {}
         
@@ -14,6 +21,7 @@ namespace _9_ClassesChallenge
         {
             this.firstName = firstName;
             this.lastName = lastName;
+            
         }
         public Human(string firstName, string lastName, string eyeColor)
         {
@@ -27,8 +35,14 @@ namespace _9_ClassesChallenge
             this.lastName = lastName;
             this.age = age;
         }
+
         //parameterized constructor
-       
+       public Human(string firstName, string lastName, string eyeColor, int age) {
+        this.firstName = firstName; 
+        this.lastName = lastName; 
+        this.age = age; 
+        this.eyeColor= eyeColor; 
+       }
 
         public void AboutMe()
         {
